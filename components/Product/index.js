@@ -2,7 +2,7 @@ import React from 'react';
 import {View,Image,TouchableOpacity,Text} from 'react-native';
 
 
-    const Product = ({image, marginTop, onPress, title}) => {
+    const Product = ({image, marginTop, onPress, title, description, price}) => {
 
         return(
             <TouchableOpacity
@@ -32,13 +32,13 @@ import {View,Image,TouchableOpacity,Text} from 'react-native';
                         fontWeight:"bold",
                         fontSize:16
                         }}>
-                        290 calories
+                        {`${price} €`}
                     </Text>
 
                 </View>
 
                 <Image
-                    source={image}
+                    source={{uri:image}}
                     style={{
                         height:105,
                         alignSelf:"center",
@@ -63,7 +63,7 @@ import {View,Image,TouchableOpacity,Text} from 'react-native';
                     paddingHorizontal:10,
                     color:"#848385"
                     }}>
-                    Beef burger
+                    {description}
                 </Text>
 
             </TouchableOpacity>

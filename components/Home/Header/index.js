@@ -10,7 +10,7 @@ const Header = () => {
         <View style={styles.viewHeader}>
                 <View style={styles.imageLeft}>
                     <Image 
-                        source={require('../../assets/images/1.png')}
+                        source={require('../../../assets/images/1.png')}
                     />
                 </View>
 

@@ -5,16 +5,15 @@ class Firebase {
 
     constructor() {
         this.auth = auth;
-        this.firestore = firestore();
+        this.firestore = firestore;
     }
 
-    getMenu() {
-        // return (
-            
-        // )
-
-    }
-
+    getMenu = (ordering) => firestore().collection("menu")
+                               .orderBy("position", ordering)
+    
+    getDataSort = (collection, champ, sort) => firestore().collection(collection)
+                               .orderBy(champ, sort)
+        
 
 }
 
